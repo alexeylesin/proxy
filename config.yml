@@ -9,7 +9,6 @@
 localServer:
   port: 25578 # порт локального сервера
   motd: '' # MOTD локального сервера
-  onlineMode: false # true - лицензионный, false - пиратский
   serverName: '' # название удаленного сервера
   remoteServer: '' # айпи удаленного сервера
   remotePort: 25565 # порт удаленного сервера

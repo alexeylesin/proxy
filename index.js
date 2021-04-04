@@ -17,7 +17,7 @@ global.random_number = function random_number(min, max) {
 
 let localServerOptions = {
   'port': config.localServer.port,
-  'online-mode': config.localServer.onlineMode,
+  'online-mode': false,
   'encryption': false,
   'motd': config.localServer.motd
 }
@@ -45,7 +45,7 @@ let proxy = createProxy(localServerOptions, serverList, proxyOptions)
 proxy.on('error', console.error)
 
 proxy.on('listening', () => {
-  const listmsg = `[Proxy] Локальный прокси запущен на порту ${config.localServer.port}, тип сервера (online-mode) - ${config.localServer.onlineMode}, MOTD - "${config.localServer.motd}", проксируется сервер ${config.localServer.serverName}`
+  const listmsg = `[Proxy] Локальный прокси запущен на порту ${config.localServer.port}, MOTD - "${config.localServer.motd}", проксируется сервер ${config.localServer.serverName}`
   console.info(listmsg)
   if (config.vkBot.enable === true && config.vkBot.logLevel === 'full') {
     encoded_listmsg = encodeURI(listmsg)
