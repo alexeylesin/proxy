@@ -14,7 +14,12 @@
     "node-rsa": "^0.4.2",
     "node-vk-bot-api": "^3.4.0",
     "queuejs": "^0.1.0",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "acorn": ">=5.7.4",
+    "minimist": ">=0.2.1",
+    "js-yaml": ">=3.13.1",
+    "lodash": ">=4.17.19",
+    "yargs-parser": ">=5.0.0-security.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",

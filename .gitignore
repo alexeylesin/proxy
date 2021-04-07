@@ -3,3 +3,6 @@ node_modules/
 
 # Visual Studio Code
 .vscode/
+
+# Config for testing
+config_test.yml

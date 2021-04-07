@@ -22,3 +22,4 @@ vkBot:
 modules:
   packetLogger: false # отправлять логи пакетов
   chatLogger: true # отправлять логи чата и команд
+  
