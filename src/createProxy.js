@@ -1,3 +1,4 @@
+const fs = require('fs')
 const NodeRSA = require('node-rsa')
 const path = require('path')
 
@@ -10,10 +11,11 @@ const localServerPlugins = [
   require(path.join(mcProtocolPath, '../server/ping'))
 ]
 
-const proxyPlugins = [
-  require('./Plugins/ChatLogger'),
-  require('./Plugins/PacketLogger')
-]
+const pluginsDir = './Plugins'
+const proxyPlugins = []
+for (const file of fs.readdirSync(pluginsDir).filter(file => file.endsWith('.js') && !file.endsWith('.disabled.js'))) {
+  proxyPlugins.push(require(`${pluginsDir}/${file}`));
+}
 
 /**
  * Create a new proxy
